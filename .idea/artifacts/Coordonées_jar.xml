@@ -2,7 +2,7 @@
   <artifact type="jar" name="Coordonées:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Coordonées_jar</output-path>
     <root id="archive" name="Coordonées.jar">
-      <element id="module-output" name="Coordonées" />
+      <element id="module-output" name="Coordonees" />
       <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
     </root>
   </artifact>

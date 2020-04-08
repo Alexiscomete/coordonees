@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Coordonées.iml" filepath="$PROJECT_DIR$/Coordonées.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Coordonees.iml" filepath="$PROJECT_DIR$/Coordonees.iml" />
     </modules>
   </component>
 </project>
