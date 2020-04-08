@@ -1,0 +1,20 @@
+name: Coordonnees
+main: fr.alexiscomete.coordonees.Coordonnees
+version: 1.0.0
+author: Alexiscomete
+authors:
+  - Shinigami (aide et destinataire du plugin)
+website: https://discord.gg/MAqmBFa
+description: Plugin permettant par exemple de voir ses coordonnees (sans le F3) et de les copier, il permet aussi de voir l'heure et de convertir des coordonnées Overworld <-> Nether.
+commands:
+  coordonnees:
+    description: Permet d'utiliser toutes les commandes du plugin.
+    usage: /coordonnees [sous-commande ; ici(ou i)/world(ou w)/time(ou t)/convertir(ou c)] [afficher (ou a) + true/false , sauf convertir / envoyer(ou e/send/s) facultatif(+ player) , tout / copie(ou c) (shift + flèches puis ctrl + c) , tout / world de départ, (nether(ou n)/overworld(ou o)) + coos]
+    permission: everyone.everyone
+    aliases:
+      - coo
+      - c
+permissions:
+  everyone.everyone:
+    description: tout le monde
+    default: true
