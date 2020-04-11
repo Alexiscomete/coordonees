@@ -1,5 +1,7 @@
 package fr.alexiscomete.coordonnees.commands;
 
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -113,7 +115,7 @@ public class coosCommands implements CommandExecutor {
                             coosCommands.miseAJour(player);
                         }else{
                             timer.cancel();
-                            timer.purge ();
+                            timer.purge();
                         }
                     }
                 },1000);
@@ -133,7 +135,7 @@ public class coosCommands implements CommandExecutor {
         if (testWorld){
             message.append("Time : ").append(player.getWorld().getTime());
         }
-        player.sendActionBar(message); //ne fonctionne pas
+        player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(String.valueOf(message)));
     }
 
     public boolean getIfPlayerActivateWorldOrCoos(Player player, boolean WorldOrCoos){
