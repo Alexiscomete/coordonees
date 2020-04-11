@@ -5,6 +5,9 @@ author: Alexiscomete
 authors:
   - Shinigami (aide et destinataire du plugin)
 website: https://discord.gg/MAqmBFa
+websites:
+  - https://discord.gg/MAqmBFa
+  - https://github.com/Alexiscomete/coordonees
 description: Plugin permettant par exemple de voir ses coordonnees (sans le F3) et de les copier, il permet aussi de voir l'heure et de convertir des coordonnées Overworld <-> Nether.
 commands:
   coordonnees:
