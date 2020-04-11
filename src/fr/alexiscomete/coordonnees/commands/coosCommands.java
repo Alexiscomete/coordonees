@@ -103,8 +103,8 @@ public class coosCommands implements CommandExecutor {
                 playerActivateWorld.set(indexOfPlayer, false);
             }else{
                 playerActivateWorld.set(indexOfPlayer, true);
-                Timer chrono = new Timer();
-                chrono.schedule(new TimerTask() {
+                Timer timer = new Timer();
+                timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
                         int indexOfPlayer = coosCommands.playersOnline.indexOf(player);
@@ -112,7 +112,8 @@ public class coosCommands implements CommandExecutor {
                         if (test){
                             coosCommands.miseAJour(player);
                         }else{
-                            chrono.stop(); //ne fonctionne pas
+                            timer.cancel();
+                            timer.purge ();
                         }
                     }
                 },1000);
