@@ -112,7 +112,7 @@ public class coosCommands implements CommandExecutor {
                         if (test){
                             coosCommands.miseAJour(player);
                         }else{
-                            chrono.stop();
+                            chrono.stop(); //ne fonctionne pas
                         }
                     }
                 },1000);
@@ -132,7 +132,7 @@ public class coosCommands implements CommandExecutor {
         if (testWorld){
             message.append("Time : ").append(player.getWorld().getTime());
         }
-        player.sendActionBar(message);
+        player.sendActionBar(message); //ne fonctionne pas
     }
 
     public boolean getIfPlayerActivateWorldOrCoos(Player player, boolean WorldOrCoos){
