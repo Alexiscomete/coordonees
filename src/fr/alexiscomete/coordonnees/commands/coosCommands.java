@@ -2,6 +2,7 @@ package fr.alexiscomete.coordonnees.commands;
 
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -30,6 +31,7 @@ public class coosCommands implements CommandExecutor {
                             return true;
                         }else if (strings[1].equalsIgnoreCase("envoyer") || strings[1].equalsIgnoreCase("e") || strings[1].equalsIgnoreCase("send") || strings[1].equalsIgnoreCase("s")){
                             player.sendMessage("Commande en cours de développement :)");
+                            sendMessagePlayerCoos(player, "", strings);
                             return true;
                         }else if (strings[1].equalsIgnoreCase("c") || strings[1].equalsIgnoreCase("copie")){
                             player.sendMessage("Commande en cours de développement :)");
@@ -42,6 +44,7 @@ public class coosCommands implements CommandExecutor {
                         Player player = (Player)commandSender;
                         if (strings[1].equalsIgnoreCase("envoyer") || strings[1].equalsIgnoreCase("e") || strings[1].equalsIgnoreCase("send") || strings[1].equalsIgnoreCase("s")){
                             player.sendMessage("Commande en cours de développement :)");
+                            sendMessagePlayerCoos(player, "", strings);
                             return true;
                         }else if (strings[1].equalsIgnoreCase("c") || strings[1].equalsIgnoreCase("copie")){
                             player.sendMessage("Commande en cours de développement :)");
@@ -53,6 +56,7 @@ public class coosCommands implements CommandExecutor {
                     }else if (strings[0].equalsIgnoreCase("c") || strings[0].equalsIgnoreCase("convertir")){
                         if (strings[1].equalsIgnoreCase("envoyer") || strings[1].equalsIgnoreCase("e") || strings[1].equalsIgnoreCase("send") || strings[1].equalsIgnoreCase("s")){
                             commandSender.sendMessage("Commande en cours de développement :)");
+                            sendMessagePlayerCoos(commandSender, "", strings);
                             return true;
                         }else if (strings[1].equalsIgnoreCase("c") || strings[1].equalsIgnoreCase("copie")){
                             commandSender.sendMessage("Commande en cours de développement :)");
@@ -145,6 +149,19 @@ public class coosCommands implements CommandExecutor {
         }else{
             return playerActivateWorld.get(indexOfPlayer);
         }
+    }
+
+    public void sendMessagePlayerCoos(CommandSender commandSender, String message, @NotNull String[] strings) { // Merci à AmeliaThe1st °v°#9434 (pseudo Discord) pour cette fonction
+        if (strings.length < 3) {
+            commandSender.sendMessage("Vous avez oublié de préciser le destinataire du message");
+            return;
+        }
+        Player player = Bukkit.getPlayer(strings[2]);
+        if (player == null) {
+            commandSender.sendMessage("Le joueur est invalide");
+            return;
+        }
+        player.sendMessage(commandSender + " vous envoie un message : " + message);
     }
 
 }
